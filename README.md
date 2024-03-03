@@ -13,7 +13,7 @@ This application is a sophisticated real-time hand gesture recognition system. I
 
 ## Installation
 
-Clone the repository: `git clone https://github.com/amnullh/ISL_DELL.git`
+Clone the repository: `git clone https://github.com/amnullh/Indian_Sign_Language-DELL.git`
 
 ## Usage
 
