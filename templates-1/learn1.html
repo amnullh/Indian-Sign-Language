@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Platform</title>
+</head>
+<body>
+    <h1>Live streaming</h1>
+    <div style="display:flex;">
+        <div>
+<!--            <div style="width:60%; background-color:black;" id="camera_off"></div>-->
+            <img src="{{ url_for('video') }}" style="width:60%;" id="camera_on">
+        </div>
+<!--        <div>-->
+<!--            <div id="prediction"></div>-->
+<!--        </div>-->
+        <div style="background-color: black; color: white; width: 40%" id="prediction">
+            Predicted Alphabet: Loading...
+        </div>
+    </div>
+
+
+    <script>
+
+
+        function updatePrediction() {
+            fetch('/predict')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('prediction').textContent = 'Predicted Alphabet: ' + data.prediction;
+                    setTimeout(updatePrediction, 1000);  // Update every 1 second
+                })
+                .catch(error => {
+                    console.error('Error fetching prediction:', error);
+                });
+        }
+
+        updatePrediction();  // Initial update
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #1E0040;
+    color: #fff;
+    padding: 3rem 4rem;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.circle1{
+    border-radius: 89.5625rem;
+/* background: #406CD7; */
+background: rgba(225, 77, 15, 0.42);
+filter: blur(297px);
+width: 89.5625rem;
+height: 83.25rem;
+position: absolute;
+bottom: -60rem;
+left: 30rem;
+z-index: -1;
+}
+
+.circle2{
+    border-radius: 89.5625rem;
+background: #406CD7;
+/* background: rgba(225, 77, 15, 0.42); */
+filter: blur(297px);
+width: 89.5625rem;
+height: 83.25rem;
+position: absolute;
+bottom: 40rem;
+right: 40rem;
+z-index: -1;
+}

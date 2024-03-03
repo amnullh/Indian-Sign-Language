@@ -1,0 +1,81 @@
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.practice-isl{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main{
+    padding: 2rem 4.3rem;
+}
+.sign-img{
+    background-color: #406CD7;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.camera{
+    width: 40rem;
+    height: 25rem;
+    background-color: #000;
+    border-radius: 20px;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.user-input{
+    border: none;
+    box-shadow: 0 0 0 2px #49BEFF;
+    background: rgba(255, 255, 255, 0.18);
+    height: 3rem;
+    width: 20rem;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    font-size: 1.1rem;
+    color: #ffff;
+}
+
+.user-input::placeholder{
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffffa4;
+}
+
+.learn-btn{
+    margin-left: 1.5rem;
+    border: none;
+    height: 3rem;
+    width: 7rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #C58916;
+    padding: 0.75rem 2.5rem;
+    border-radius: 10px;
+}
+
+.isl-text{
+    margin-bottom: 4rem;
+}
+
+.sign-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.input-sign, .detect-sign{
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+#sm{
+    display: none;
+}
+

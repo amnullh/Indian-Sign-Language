@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/test.css">
+    <link rel="stylesheet" href="../static/css/general.css" />
+    <title>Test</title>
+</head>
+<body>
+    <header class="header">
+        <a class="bck-btn" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" fill="#fff" width="4rem"><path d="m142-480 294 294q15 15 14.5 35T435-116q-15 15-35 15t-35-15L57-423q-12-12-18-27t-6-30q0-15 6-30t18-27l308-308q15-15 35.5-14.5T436-844q15 15 15 35t-15 35L142-480Z"/></svg></a>
+        <h1 class="heading">TEST</h1>
+    </header>
+    <main class="main">
+        <ul class="quest-li">
+            <li>A</li>
+            <li>B</li>
+            <li>1</li>
+            <li>C</li>
+            <li>6</li>
+          </ul>
+          <section class="test-section">
+            <div class="camera">
+                    <img src="{{ url_for('video') }}" width="100%">
+            </div>
+            <textarea disabled class="textarea" id="prediction"></textarea>
+            <a class="download-btn" href="{{ 'download_report' }}">Download Docx<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" fill="#ffff" width="4rem"><path d="M480-337q-8 0-15-2.5t-13-8.5L308-492q-12-12-11.5-28t11.5-28q12-12 28.5-12.5T365-549l75 75v-286q0-17 11.5-28.5T480-800q17 0 28.5 11.5T520-760v286l75-75q12-12 28.5-11.5T652-548q11 12 11.5 28T652-492L508-348q-6 6-13 8.5t-15 2.5ZM240-160q-33 0-56.5-23.5T160-240v-80q0-17 11.5-28.5T200-360q17 0 28.5 11.5T240-320v80h480v-80q0-17 11.5-28.5T760-360q17 0 28.5 11.5T800-320v80q0 33-23.5 56.5T720-160H240Z"/></svg></a>
+          </section>
+
+    </main>
+
+<!--    <div class="circle1"></div>-->
+<!--    <div class="circle2"></div>-->
+
+
+    <script>
+        function updatePrediction() {
+            fetch('/predict')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('prediction').textContent = data.prediction;
+                    setTimeout(updatePrediction, 1000);  // Update every 1 second
+                })
+                .catch(error => {
+                    console.error('Error fetching prediction:', error);
+                });
+        }
+
+        updatePrediction();
+    </script>
+</body>
+</html>

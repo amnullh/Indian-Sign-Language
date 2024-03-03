@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/module.css" />
+    <link rel="stylesheet" href="../static/css/general.css" />
+    <title>Modules</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="heading">Learn ISL</h1>
+    </header>
+    <main class="main">
+        <a href="{{ url_for('learn') }}">
+            <div class="card card1">
+                <h1 class="hed">0 - 9</h1>
+                <p class="desc">Learn Numbers</p>
+            </div>
+        </a>
+        <a href="{{ url_for('learn') }}">
+            <div class="card card2">
+                <h1 class="hed">A - B</h1>
+                <p class="desc">Learn Alphabets</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="card card3">
+                <h1 class="hed">Greetings</h1>
+                <p class="desc">Learn Greetings</p>
+            </div>
+        </a>
+        <a href="{{ url_for('test') }}">
+            <div class="card card4">
+                <h1 class="hed">Test</h1>
+                <p class="desc">See your Progress</p>
+            </div>
+        </a>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+  </body>
+</html>

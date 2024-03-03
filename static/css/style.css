@@ -1,0 +1,48 @@
+
+
+.header{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 3rem;
+    padding-left: 1rem;
+}
+.logo-txt{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.main{
+    padding-left: 1.5rem;
+}
+.heading{
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    padding-top: 6rem;
+}
+
+.description{
+    font-size: 1rem;
+    font-weight: 100;
+    width: 40rem;
+    padding-bottom: 4rem;
+}
+
+.buttons a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #C58916;
+    padding: 0.75rem 2.5rem;
+    border-radius: 10px;
+}
+
+
+.handimg img{
+    width: 30rem;
+    position: absolute;
+bottom: -1rem;
+right: 0;
+z-index: -1;
+}
